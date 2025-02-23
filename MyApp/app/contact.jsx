@@ -25,13 +25,13 @@ export default function TabTwoScreen() {
         <ThemedText type="title">Contact Us</ThemedText>
       </ThemedView>
       <ThemedText>Get in touch with us or take a look at our FAQ page if you have some general questions.</ThemedText>
-      
-      <Link href="/faq" asChild>
-        <Pressable style={styles.button}>
-          <Text style={styles.buttonText}>FAQ</Text>
-        </Pressable>
-      </Link>
-  
+      <ThemedText><Link style={styles.link} href="/faq">FAQ</Link></ThemedText>
+
+      <ThemedText>1200 Spring St.
+                  Newark NJ 07524
+      </ThemedText>
+      <ThemedText>Phone: 555-555-5555</ThemedText>
+
     </ParallaxScrollView>
   );
 }
@@ -60,5 +60,8 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
     padding: 4,
+  },
+  link: {
+    textDecorationLine: 'underline',
   }
 });
